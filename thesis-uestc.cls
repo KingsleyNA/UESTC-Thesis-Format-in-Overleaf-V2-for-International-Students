@@ -725,9 +725,9 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
   \renewcommand\thesection{\arabic{section}}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
   \setcounter{section}{0}
-  \chapter*{致\hspace{12pt}谢}
-  \addcontentsline{toc}{chapter}{致\hspace{12pt}谢}
-  \markboth{致谢}{致谢}
+  \chapter*{Acknowledgements}
+  \addcontentsline{toc}{chapter}{Acknowledgements}
+  \markboth{Acknowledgements}{Acknowledgements}
   \thispagestyle{fancy}
 }
 
