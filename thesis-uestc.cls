@@ -698,7 +698,7 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 \newcommand{\standardhead}{
   \fancyhf{}
   \fancyhead[CO]{\fontsize{10.5pt}{12.6pt}\selectfont\leftmark}
-  \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont 电子科技大学\chinesedegreename{}学位论文}
+  \fancyhead[CE]{\fontsize{10.5pt}{12.6pt}\selectfont \englishbooktitle{} of University of Electronic Science and Technology of China}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\thepage}
 }
 
@@ -737,15 +737,15 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
   \standardhead
   \pagenumbering{arabic}
   \setcounter{page}{1}
-  \chapter{绪\hspace{6pt}论}
-    \chaptermark{绪论}
+  \chapter{Introduction}
+    \chaptermark{Introduction}
 }
 
 \newcommand{\thesisappendix}{
-  \chapter*{附\chinesespace 录}
+  \chapter*{Appendix}
     \setcounter{section}{0}
-    \addcontentsline{toc}{chapter}{附录}
-    \markboth{附录}{附录}
+    \addcontentsline{toc}{chapter}{Appendix}
+    \markboth{Appendix}{Appendix}
     \thispagestyle{fancy}
     \renewcommand{\theequation}{a-\arabic{equation}}
     \renewcommand{\thetable}{a-\arabic{table}}
@@ -753,10 +753,14 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 }
 
 \newcommand{\thesistranslationoriginal}{
-  \chapter*{外文资料原文}
+  \chapter*{
+    Original foreign materials}
     \setcounter{section}{0}
-    \addcontentsline{toc}{chapter}{外文资料原文}
-    \markboth{外文资料原文}{外文资料原文}
+    \addcontentsline{toc}{chapter}{
+      Original foreign materials}
+    \markboth{
+      Original foreign materials}{
+      Original foreign materials}
     \thispagestyle{fancy}
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
@@ -819,7 +823,7 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
   \bibliography{#2}
 }
 
-\newcites{achievement}{攻读\chinesedegreename{}学位期间取得的成果}
+\newcites{achievement}{Academic Achievements During The  \englishdegreename{} Study}
 
 \newenvironment{thesisachievement}{
   \renewcommand{\bibname}{攻读\chinesedegreename{}学位期间取得的成果}
