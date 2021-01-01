@@ -206,12 +206,12 @@
 \urlstyle{rm}
 \raggedbottom
 
-\renewcommand{\contentsname}{目\hspace{6pt}录}
-\renewcommand{\bibname}{参考文献}
-\renewcommand{\figurename}{图}
-\renewcommand{\tablename}{表}
-\renewcommand{\listfigurename}{图目录}
-\renewcommand{\listtablename}{表目录}
+\renewcommand{\contentsname}{Contents}
+\renewcommand{\bibname}{References}
+\renewcommand{\figurename}{Figure}
+\renewcommand{\tablename}{Table}
+\renewcommand{\listfigurename}{List of Figures}
+\renewcommand{\listtablename}{List of Tables}
 
 % \newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
 % \addtocontents{lof}{\protect\noaddvspace}
@@ -220,9 +220,9 @@
 \pretocmd{\listoffigures}{
     \newpage
   \fancyhf{}
-  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 图目录}
+  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont List of Figures}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
-  \renewcommand{\cftfigpresnum}{图}
+  \renewcommand{\cftfigpresnum}{Figure }
   \addtolength{\cftfignumwidth}{12pt}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 }{}{}
@@ -259,7 +259,7 @@
 \titlespacing{\subsection}{0pt}{12pt}{6pt}
 \titlespacing{\subsubsection}{0pt}{12pt}{6pt}
 
-\renewcommand\thechapter{第\zhnumber{\arabic{chapter}}章}
+\renewcommand\thechapter{Chapter \arabic{chapter}}
 \renewcommand\thesection{\arabic{chapter}.\arabic{section}}
 
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
@@ -719,7 +719,7 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 \fi}
 
 
-\renewcommand{\chaptermark}[1]{\markboth{第\zhnumber{\arabic{chapter}}章 \hspace{5.25pt}#1}{}}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter \arabic{chapter} \hspace{5.25pt}#1}{}}
 
 \newcommand{\thesisacknowledgement}{
   \renewcommand\thesection{\arabic{section}}
@@ -774,7 +774,7 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
     \renewcommand{\thefigure}{\arabic{figure}}
-    \renewcommand{\figurename}{图}
+    \renewcommand{\figurename}{Figure }
     \renewcommand{\tablename}{表}
 }
 
