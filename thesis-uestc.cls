@@ -131,11 +131,11 @@
 \newcommand{\thesisglossarylist}{
   \newpage
   \fancyhf{}
-  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 缩略词表}
+  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont Glossary}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
   \setlength\glsdescwidth{.7\textwidth}
-  \pdfbookmark{缩略词表}{glossary}
-  \printglossary[style=long-uestc, title={\protect\centering 缩略词表}, nonumberlist, nogroupskip]
+  \pdfbookmark{Glossary}{glossary}
+  \printglossary[style=long-uestc, title={\protect\centering Glossary}, nonumberlist, nogroupskip]
 }
 \makeglossaries
 
@@ -704,9 +704,9 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 
 \pretocmd{\tableofcontents}{
   \fancyhf{}
-  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 目录}
+  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont Contents}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
-  \pdfbookmark{目录}{toc}
+  \pdfbookmark{Contents}{toc}
 }{}{}
 
 \newcommand{\thesistableofcontents}{
