@@ -1,0 +1,2 @@
+# UESTC Thesis Format in Overleaf V2 for International Students
+ UESTC Thesis Format for International Students has always been in Word which makes it utterly difficult for all international students to meet the required format. In this repository, I seek to rewrite the Latex Format, to suit both Master and Doctoral Students alike. Note that, this is an independent repository and the stakeholders of the institution has no collaborations with the author of the repository. You may use this for your own perusal.
