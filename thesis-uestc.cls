@@ -192,7 +192,7 @@
 
 \makeatletter
 
-\renewcommand{\algorithmname}{算法}
+\renewcommand{\algorithmname}{Algorithm}
 \renewcommand{\thealgorithm}{\arabic{chapter}-\arabic{algorithm}}
 \captionsetup[algorithm]{aboveskip=6pt}
 \AtBeginEnvironment{algorithm}{\vspace{6pt}}
