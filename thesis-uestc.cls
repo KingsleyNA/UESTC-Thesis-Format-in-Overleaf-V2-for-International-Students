@@ -134,8 +134,8 @@
   \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont Glossary}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
   \setlength\glsdescwidth{.7\textwidth}
-  \pdfbookmark{Glossary}{glossary}
-  \printglossary[style=long-uestc, title={\protect\centering Glossary}, nonumberlist, nogroupskip]
+  \pdfbookmark{缩略词表}{glossary}
+  \printglossary[style=long-uestc, title={\protect\centering 缩略词表}, nonumberlist, nogroupskip]
 }
 \makeglossaries
 
@@ -222,7 +222,7 @@
   \fancyhf{}
   \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont List of Figures}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
-  \renewcommand{\cftfigpresnum}{Figure }
+  \renewcommand{\cftfigpresnum}{Figure}
   \addtolength{\cftfignumwidth}{12pt}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 }{}{}
@@ -234,9 +234,9 @@
 \pretocmd{\listoftables}{
     \newpage
   \fancyhf{}
-  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont 表目录}
+  \fancyhead[C]{\fontsize{10.5pt}{12.6pt}\selectfont List of Tables}
   \fancyfoot[CE,CO]{\fontsize{9pt}{10.8pt}\selectfont\Roman{pseudopage}}
-  \renewcommand{\cfttabpresnum}{表}
+  \renewcommand{\cfttabpresnum}{Table}
   \addtolength{\cfttabnumwidth}{12pt}
   \addtocontents{toc}{\protect\setcounter{tocdepth}{-1}}
 }{}{}
@@ -259,7 +259,7 @@
 \titlespacing{\subsection}{0pt}{12pt}{6pt}
 \titlespacing{\subsubsection}{0pt}{12pt}{6pt}
 
-\renewcommand\thechapter{Chapter \arabic{chapter}}
+\renewcommand\thechapter{Chapt \arabic{chapter}}
 \renewcommand\thesection{\arabic{chapter}.\arabic{section}}
 
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
@@ -465,6 +465,7 @@
 \renewcommand\cftchapfont{\heiti}
 
 \newcommand{\chinesedegreename}{硕士}
+\newcommand{\englishdegreename}{Master}
 \newcommand{\chinesebooktitle}{硕士学位论文}
 \newcommand{\englishbooktitle}{Master Thesis}
 \newcommand{\thetitle}{}
@@ -528,18 +529,21 @@
 
 \DeclareOption{master}{
   \renewcommand{\chinesedegreename}{硕士}
+  \renewcommand{\englishdegreename}{Master}
   \renewcommand{\chinesebooktitle}{硕士学位论文}
   \renewcommand{\englishbooktitle}{Master Thesis}
 }
 
 \DeclareOption{promaster}{
   \renewcommand{\chinesedegreename}{硕士}
+  \renewcommand{\englishdegreename}{Master}
   \renewcommand{\chinesebooktitle}{专业学位硕士学位论文}
   \renewcommand{\englishbooktitle}{Master Thesis for Professional Degree}
 }
 
 \DeclareOption{doctor}{
   \renewcommand{\chinesedegreename}{博士}
+  \renewcommand{\englishdegreename}{Doctoral}
   \renewcommand{\chinesebooktitle}{博士学位论文}
   \renewcommand{\englishbooktitle}{Doctoral Dissertation}
 }
@@ -563,6 +567,8 @@
           \heiti{\thetitle}
     } \\
     \cline{2-2}
+            & \\
+    \cline{2-2}        
             & \\
     \cline{2-2}
   \end{tabular} \\[\baselineskip]
@@ -665,10 +671,10 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 \thispagestyle{empty}  
 \begin{center}
 	\fontsize{22pt}{22pt}\selectfont ~~~~~~~~~~ \\[20bp]
-	\fontsize{18pt}{18pt}\selectfont \textbf{\thetitleEn} \\[230bp]
+	\fontsize{18pt}{18pt}\selectfont \textbf{\thetitleEn} \\[210bp]
 	\fontsize{14pt}{14pt}\selectfont A Doctoral Dissertation Submitted to \\[12bp]
 	\fontsize{14pt}{14pt}\selectfont
-	{\MakeUppercase University of Electronic Science and Technology of China} \\[150bp]
+	{\MakeUppercase University of Electronic Science and Technology of China} \\[160bp]
 
 	\renewcommand\arraystretch{1.3}
 	\begin{tabular}{>{\fontsize{16pt}{16pt}\selectfont}l
@@ -753,14 +759,12 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
 }
 
 \newcommand{\thesistranslationoriginal}{
-  \chapter*{
-    Original foreign materials}
+  \chapter*{Original Foreign Materials}
     \setcounter{section}{0}
-    \addcontentsline{toc}{chapter}{
-      Original foreign materials}
+    \addcontentsline{toc}{chapter}{Original Foreign Materials}
     \markboth{
-      Original foreign materials}{
-      Original foreign materials}
+      Original Foreign materials}{
+      Original Foreign materials}
     \thispagestyle{fancy}
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
@@ -778,7 +782,7 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
     \renewcommand{\theequation}{\arabic{equation}}
     \renewcommand{\thetable}{\arabic{table}}
     \renewcommand{\thefigure}{\arabic{figure}}
-    \renewcommand{\figurename}{Figure }
+    \renewcommand{\figurename}{图}
     \renewcommand{\tablename}{表}
 }
 
@@ -823,10 +827,10 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
   \bibliography{#2}
 }
 
-\newcites{achievement}{Academic Achievements During The  \englishdegreename{} Study}
+\newcites{achievement}{Academic Achievements During The \englishdegreename{} Study}
 
 \newenvironment{thesisachievement}{
-  \renewcommand{\bibname}{攻读\chinesedegreename{}学位期间取得的成果}
+  \renewcommand{\bibname}{Academic Achievements During The \englishdegreename{} Study}
   \begin{thebibliography}{lo}
   \interlinepenalty=10000
   \begin{spacing}{1.667}
@@ -834,18 +838,18 @@ UDC\textsuperscript{ 注1} \uline{\hspace{2.5in}} \\[0bp]
   \small
 }{
   \end{spacing}\end{thebibliography}
-  \renewcommand{\bibname}{参考文献}
+  \renewcommand{\bibname}{References}
 }
 
 \newcommand{\thesisloadachievement}[1]{
   \nociteachievement{*}
-  \renewcommand{\bibname}{攻读\chinesedegreename{}学位期间取得的成果}
+  \renewcommand{\bibname}{Academic Achievements During The \englishdegreename{} Study}
   \thispagestyle{fancy}
   \begin{spacing}{1.667}
   \bibliographystyleachievement{thesis-uestc}
   \bibliographyachievement{#1}
   \end{spacing}
-  \renewcommand{\bibname}{参考文献}
+  \renewcommand{\bibname}{References}
 }
 
 
